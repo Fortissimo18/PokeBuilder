@@ -4,7 +4,6 @@ import PokeIngredients from './PokeIngredients/PokeIngredients';
 
 const poke = (props) => {
     let transformedIngredients = [];
-
     Object.keys(props.ingredients)
     .forEach(igKey => {
             return [...Array(props.ingredients[igKey])].forEach((_, i) => {
