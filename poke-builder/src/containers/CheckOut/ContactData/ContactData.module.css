@@ -1,0 +1,58 @@
+@media(min-width:481px) {
+  :root {
+    --contactButton-font-size: 0.8vw;
+    --contactButton-padding  : 0.6vw;
+    --contactData-margin-top : 2.3vw;
+  }
+
+  .ContactData button:hover {
+    background: #bbc8ba;
+    color     : #f6f6f6;
+    transition: background-color 1s ease-out;
+  }
+
+  .ContactData button:disabled:hover {
+    background  : none;
+    border-color: lightgray;
+    color       : lightgray;
+    font-weight : 400;
+  }
+}
+
+@media(max-width:480px) {
+  :root {
+    --contactButton-font-size: 3.5vw;
+    --contactButton-padding  : 1.5vw;
+    --contactData-margin-top : 4vh;
+  }
+}
+
+.ContactData {
+  margin : 0;
+  padding: 0;
+}
+
+.ContactData button {
+  background    : #f6f6f6;
+  color         : #546747;
+  border        : solid 2px #bbc8ba;
+  padding       : var(--contactButton-padding);
+  font-family   : "Open Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size     : var(--contactButton-font-size);
+  font-weight   : 600;
+  border-radius : 10px;
+  margin        : auto;
+  margin-top    : var(--contactData-margin-top);
+  margin-bottom : 0;
+  outline       : none;
+  display       : block;
+}
+
+.ContactData button:disabled {
+  background  : none;
+  border-color: lightgray;
+  color       : lightgray;
+  font-weight : 400;
+}

@@ -1,0 +1,113 @@
+@media(min-width:481px) {
+    :root {
+        --orderSummary-height          : 70vh;
+        --orderSummary-width           : auto;
+        --orderSummary-padding         : 22vh;
+        --orderSummary-margin-top      : -2vh;
+        --orderSummaryTitle-font-size  : 5vh;
+        --orderSummaryText-height      : 2.8vh;
+        --orderSummaryText-padding     : 2px;
+        --orderSummaryList-padding-top : 0.8vh;
+        --orderSummaryList-padding-left: 8vh;
+        --orderSummaryList-font-size   : 2.5vh;
+        --orderSummaryList-font-weight : 500;
+
+        --orderSummaryButton-font-size  : 3vh;
+        --orderSummaryButton-padding-top: 1vh;
+
+    }
+
+    .ContinueButton:hover,
+    .CancelButton:hover {
+        outline  : none;
+        transform: scale(1.25);
+    }
+
+}
+
+@media(max-width:480px) {
+    :root {
+        --orderSummary-height        : auto;
+        --orderSummary-width         : 100vw;
+        --orderSummary-padding       : 9vw;
+        --orderSummary-margin-top    : 12vh;
+        --orderSummaryTitle-font-size: 7vw;
+
+        --orderSummaryText-height : 4vw;
+        --orderSummaryText-padding: 0;
+
+        --orderSummaryList-padding-top : 0.8vh;
+        --orderSummaryList-padding-left: 35vw;
+        --orderSummaryList-font-size   : 4vw;
+        --orderSummaryList-font-weight : 600;
+
+        --orderSummaryButton-font-size  : 5vw;
+        --orderSummaryButton-padding-top: 0;
+
+    }
+}
+
+
+.OrderSummary {
+    display            : table;
+    color              : #2b331f;
+    width              : auto;
+    height             : var(--orderSummary-height);
+    width              : var(--orderSummary-width);
+    padding            : var(--orderSummary-padding);
+    font-family        : 'Caveat', cursive;
+    margin-left        : 0;
+    margin-top         : var(--orderSummary-margin-top);
+    text-align         : center;
+    background-image   : url(../../../assets/images/pokeIngredients/NotePaper.png);
+    background-position: center;
+    background-repeat  : no-repeat;
+    background-size    : contain;
+}
+
+.OrderSummary h1 {
+    color         : #546747;
+    font-size     : var(--orderSummaryTitle-font-size);
+    font-weight   : 700;
+    letter-spacing: 2px;
+    margin        : 0;
+}
+
+.OrderSummary p {
+    font-size     : var(--orderSummaryText-height);
+    font-weight   : 500;
+    letter-spacing: 1px;
+    padding       : var(--orderSummaryText-padding);
+    margin        : 0;
+}
+
+.List {
+    padding-top   : var(--orderSummaryList-padding-top);
+    text-align    : left;
+    margin        : auto;
+    padding-left  : var(--orderSummaryList-padding-left);
+    padding-bottom: 1vh;
+    font-size     : var(--orderSummaryList-font-size);
+    font-weight   : var(--orderSummaryList-font-weight);
+    overflow-y    : auto;
+}
+
+.ContinueButton,
+.CancelButton {
+    border          : none;
+    padding         : 0;
+    font-size       : var(--orderSummaryButton-font-size);
+    font-weight     : 600;
+    background-color: transparent;
+    padding         : 0 3vh;
+    padding-top     : var(--orderSummaryButton-padding-top);
+}
+
+.CancelButton {
+    color: #944317;
+
+}
+
+.ContinueButton {
+    color: #5C9210;
+}

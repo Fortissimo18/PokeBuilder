@@ -1,0 +1,29 @@
+@media(min-width:481px) {
+    :root {
+        --myOrder-width: 65vw;
+    }
+
+    .Order:hover {
+        transform : translateY(-0.5rem) scale(1.0125);
+        box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media(max-width:480px) {
+    :root {
+        --myOrder-width: 80vw;
+    }
+}
+
+.Order {
+    position        : relative;
+    width           : var(--myOrder-width);
+    border          : 1px solid #eee;
+    box-shadow      : 0 2px 3px #ccc;
+    padding         : 2vh 2vw;
+    margin          : 3vh auto;
+    box-sizing      : border-box;
+    background-color: whitesmoke;
+    font-size       : 3vh;
+    top             : 0;
+}

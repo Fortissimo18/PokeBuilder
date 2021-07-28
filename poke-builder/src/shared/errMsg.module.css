@@ -1,0 +1,18 @@
+.ErrMsg {
+    background-image   : url(../assets/images/pokeIngredients/Parchment.png);
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    background-position: center;
+    font-size          : 13px;
+    font-weight        : 600;
+    letter-spacing     : 2px;
+    color              : #c12023;
+    text-shadow        : 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+    text-align         : left;
+    border-radius      : 3px;
+    max-width          : 70%;
+    text-align         : center;
+    padding            : 2%;
+    margin             : auto;
+    box-shadow         : 2px 4px 8px 0px rgba(46, 61, 73, 0.2);
+}

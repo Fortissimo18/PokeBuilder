@@ -1,57 +1,66 @@
+@media(min-width:481px) {
+    :root {
+        --navItem-font-size         : 1.5vmax;
+        --navItem-margin-topbottom  : 2vh;
+        --navItem-a-margin-leftright: 4em;
 
-
-
-.NavigationItem{
-    margin:10px 0;
-    box-sizing: border-box;
-    display: block;
-    height: 100%;
-    align-items: center;
+    }
 }
 
-.NavigationItem a{
-    color: #8f5c2c;
+@media(max-width:480px) {
+    :root {
+        --navItem-font-size         : 3vh;
+        --navItem-margin-topbottom  : 3vh;
+        --navItem-a-margin-leftright: 0;
+
+    }
+}
+
+.NavigationItem {
+    font-size     : var(--navItem-font-size);
+    font-family   : 'Oswald', sans-serif;
+    font-weight   : 500;
+    letter-spacing: 1px;
+    margin        : var(--navItem-margin-topbottom) 0;
+    padding       : 0.2em 0 0;
+
+}
+
+.NavigationItem a {
+    color          : #FFF;
     text-decoration: none;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
+    text-shadow    : .04em .04em 0 #9cb8b3;
+
+    padding : 0.2em;
+    margin  : 0 var(--navItem-a-margin-leftright);
+    position: relative;
+    z-index : 97;
 }
 
-.NavigationItem a:hover,
-.NavigationItem a:active,
-
-.NavigationItem a.active{
-color: #40A4C8;
+.NavigationItem a:before,
+.NavigationItem a:after {
+    position  : absolute;
+    left      : 0px;
+    width     : 100%;
+    height    : 2px;
+    background: #FFF;
+    content   : "";
+    opacity   : 0;
+    transition: all 0.3s;
 }
 
+.NavigationItem a:before {
+    top      : 0px;
+    transform: translateY(1em);
+}
 
-@media(min-width: 500px){
-    .NavigationItem{
-        margin:0;
-        box-sizing: border-box;
-        display: flex;
-        height: 100%;
-        align-items: center;
-    }
-    
-    .NavigationItem a{
-        color: white;
-        text-decoration: none;
-        height: 100%;
-        width: auto;
-        padding: 16px 10px;
-        border-bottom: 4px solid transparent;
-        box-sizing: border-box;
-        display: block;
-    }
-    
-    .NavigationItem a:hover,
-    .NavigationItem a:active,
-    
-    .NavigationItem a.active{
-    background-color: #8F5C2C;
-    border-bottom: 4px solid #40A4C8;
-    color: white;
-    }
-    
+.NavigationItem a:after {
+    bottom   : 0px;
+    transform: translateY(-1em);
+}
+
+.NavigationItem a:hover:before,
+.NavigationItem a:hover:after {
+    opacity  : 1;
+    transform: translateY(0px);
 }

@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "neontubes";
+  src        : url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot");
+  src        : url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.eot?#iefix") format("embedded-opentype"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff2") format("woff2"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.woff") format("woff"), url("https://bitbucket.org/kennethjensen/webfonts/raw/fc13c1cb430a0e9462da56fe3f421ff7af72db71/neontubes/neontubes-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style : normal;
+}
+
+@media (min-width:481px) {
+  .PokeBuilder {
+    padding-top   : calc(20vh - 6vw);
+    padding-bottom: 5vh;
+  }
+
+  .Left,
+  .Right {
+    display       : inline-block;
+    vertical-align: top;
+  }
+
+  .Left {
+    width  : 67%;
+    padding: 0;
+    margin : 0;
+  }
+
+  .Right {
+    width        : 33%;
+    padding-right: 3vw;
+  }
+
+  .Neon {
+    font-size  : 1.9vw;
+    font-weight: 600;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .PokeBuilder {
+    padding: 0 5vh;
+  }
+
+  .Left,
+  .Right {
+    display: block;
+    width  : 100%;
+    height : auto;
+  }
+
+  .Neon {
+    padding-top: 0.3em;
+    font-size  : 6vw;
+    font-weight: 600;
+  }
+}
+
+.PokeBG {
+  background-color       : whitesmoke;
+  background-image       : url(../../assets//images/pokeIngredients/Background.jpg);
+  background-position    : center;
+  background-size        : cover;
+  background-repeat      : no-repeat;
+  letter-spacing         : 2px;
+  width                  : 100vw;
+  height                 : 100%;
+  padding-top            : 0%;
+  -webkit-background-size: cover;
+  -moz-background-size   : cover;
+  -o-background-size     : cover;
+  position               : fixed;
+  top                    : 0;
+  z-index                : 0;
+}
+
+.PokeBuilder {
+  text-align: center;
+  width     : 100%;
+  height    : 100%;
+}
+
+.Neon {
+  display    : block;
+  margin     : auto;
+  transform  : translate(-50%, -50%);
+  font-family: "neontubes";
+
+  text-align                 : center;
+  white-space                : nowrap;
+  transform                  : translateZ(0) translate3D(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility        : hidden;
+  will-change                : opacity;
+
+  color            : #fdecd0;
+  text-shadow      : 0 0 0 transparent, 0 0 10px #fab73d, 0 0 20px rgba(232, 190, 85, 0.5), 0 0 40px #fab73d, 0 0 100px #fab73d, 0 0 200px #fab73d, 0 0 300px #fab73d, 0 0 500px #fab73d, 0 0 1000px #fab73d;
+  -webkit-animation: blink 2s infinite alternate;
+  animation        : blink 2s infinite alternate;
+}
+
+@keyframes blink {
+  40% {
+    opacity: 1;
+  }
+
+  42% {
+    opacity: 0.8;
+  }
+
+  43% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 0.2;
+  }
+
+  46% {
+    opacity: 1;
+  }
+}

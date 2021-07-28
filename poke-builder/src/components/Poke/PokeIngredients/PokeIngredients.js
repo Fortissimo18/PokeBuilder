@@ -1,41 +1,46 @@
 import React, { Component } from 'react';
 import classes from './PokeIngredients.module.css'
 import PropTypes from 'prop-types';
+import Ingredients from './Ingredients/Ingredients';
 
-class PokeIngredients extends Component{
-    render(){
+class PokeIngredients extends Component {
+    
+    render() {
         let ingredient = null;
         switch (this.props.type) {
-            case ('bread-buttom'):
-                ingredient = <div className={classes.BreadBottom}></div>;
+            case ('egg'):
+                ingredient = <Ingredients imgName='Egg.png' ingType='protein' numOfIngs={this.props.totalIngs} indx={this.props.indx} />
                 break;
-    
-            case ('bread-top'):
-                ingredient = <div className={classes.BreadTop}>
-                    <div className={classes.Seeds1}></div>
-                    <div className={classes.Seeds2}></div>
-                </div>;
+            case ('prawn'):
+                ingredient = <Ingredients imgName='Prawn.png' ingType='protein' numOfIngs={this.props.totalIngs} indx={this.props.indx} />
                 break;
-    
-            case ('meat'):
-                ingredient = <div className={classes.Meat}></div>;
+            case ('tofu'):
+                ingredient = <Ingredients imgName='Tofu.png' ingType='protein' numOfIngs={this.props.totalIngs} indx={this.props.indx} />
                 break;
-    
-            case ('cheese'):
-                ingredient = <div className={classes.Cheese}></div>;
+            case ('lettuce'):
+                ingredient = <Ingredients imgName='Lettuce.png' ingType='topping' numOfIngs={this.props.totalIngs} indx={this.props.indx} />
                 break;
-    
-            case ('salad'):
-                ingredient = <div className={classes.Salad}></div>;
+            case ('peas'):
+                ingredient = <Ingredients imgName='Peas.png' ingType='topping' numOfIngs={this.props.totalIngs} indx={this.props.indx} />
                 break;
-    
-            case ('bacon'):
-                ingredient = <div className={classes.Bacon}></div>;
+            case ('tomato'):
+                ingredient = <Ingredients imgName='Tomato.png' ingType='topping' numOfIngs={this.props.totalIngs} indx={this.props.indx} />
                 break;
-            
+            case ('quinoa'):
+                ingredient = <Ingredients imgName='Quinoa.png' ingType='base' numOfIngs={this.props.totalIngs} indx={this.props.indx} />
+                break;
+            case ('whiterice'):
+                ingredient = <Ingredients imgName='WhiteRice.png' ingType='base' numOfIngs={this.props.totalIngs} indx={this.props.indx} />
+                break;
+            case ('brownrice'):
+                ingredient = <Ingredients imgName='BrownRice.png' ingType='base' numOfIngs={this.props.totalIngs} indx={this.props.indx} />
+                break;
+
             default: ingredient = null;
         }
-        return ingredient;
+
+        return <div className={classes.PokeIngredients}>{ingredient}</div>;
+
     }
 };
 

@@ -1,0 +1,56 @@
+.Input {
+  position: relative;
+  display : block;
+  margin  : 0;
+  padding : 0;
+}
+
+.Input input::placeholder {
+  color         : #3a2214;
+  font-size     : 2vh;
+  font-weight   : 900;
+  letter-spacing: 2px;
+  text-shadow   : 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+}
+
+.Input input:focus::placeholder {
+  opacity: 0;
+}
+
+.InputElement {
+  padding         : 3.5vh 3vh;
+  margin-bottom   : 2vh;
+  height          : 5vh;
+  width           : 100%;
+  font-weight     : 900;
+  font-size       : 2vh;
+  letter-spacing  : 0.5px;
+  outline         : none;
+  border          : none;
+  border-radius   : 4px;
+  background-color: transparent;
+  box-shadow      : 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+}
+
+
+.InputElement:focus,
+.InputElement:active {
+  outline            : none;
+  background-image   : url(../../../assets/images/pokeIngredients/Cinnamon.png);
+  background-position: right;
+  background-repeat  : no-repeat;
+  background-size    : contain;
+  font-size          : 2vh;
+  font-weight        : 900;
+  letter-spacing     : 2px;
+}
+
+.Invalid {
+  border       : 2px solid #60391a;
+  box-shadow   : none;
+  margin-bottom: 0;
+}
+
+.ErrorMessage {
+  margin-bottom: 2vh;
+}

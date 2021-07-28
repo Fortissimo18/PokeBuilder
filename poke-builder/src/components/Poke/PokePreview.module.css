@@ -1,0 +1,43 @@
+@media(min-width:481px) {
+  :root {
+    --pokePreview-height          : 33vw;
+    --pokePreview-margin-leftright: 0;
+
+    --ingredientsPreview-top  : 37%;
+    --ingredientsPreview-left : 35%;
+    --ingredientsPreview-width: 10vw;
+
+  }
+}
+
+@media(max-width:480px) {
+  :root {
+    --pokePreview-height          : 28vh;
+    --pokePreview-margin-leftright: 5vw;
+
+    --ingredientsPreview-top  : 37%;
+    --ingredientsPreview-left : 38%;
+    --ingredientsPreview-width: 14.5vw;
+  }
+}
+
+
+.Poke {
+  background-image   : url(../../assets/images/pokeIngredients/EmptyBowl.jpg);
+  background-position: center;
+  background-size    : cover;
+  background-repeat  : no-repeat;
+  position           : relative;
+  height             : var(--pokePreview-height);
+  list-style         : none;
+  display            : block;
+  align-content      : center;
+  margin             : 0 var(--pokePreview-margin-leftright);
+}
+
+.IngredientsContainer {
+  position: absolute;
+  top     : var(--ingredientsPreview-top);
+  left    : var(--ingredientsPreview-left);
+  width   : var(--ingredientsPreview-width);
+}

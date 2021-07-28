@@ -1,3 +1,7 @@
-.Content{
-    margin-top: 72px;
+.Content {
+    margin-top      : 72px;
+    z-index         : 0;
+    max-height      : 100%;
+    width           : 100%;
+    background-color: whitesmoke;
 }
