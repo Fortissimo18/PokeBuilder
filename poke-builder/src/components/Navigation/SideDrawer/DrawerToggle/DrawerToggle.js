@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './DrawerToggle.module.css';
 
+//hamburger icon
 const drawerToggle = (props) => (
     <div
         className={classes.DrawerToggle}

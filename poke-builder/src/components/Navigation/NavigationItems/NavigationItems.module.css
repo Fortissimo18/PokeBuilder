@@ -1,15 +1,22 @@
-.NavigationItems{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    height: 100%;
+.NavigationItems {
+    margin          : 0;
+    padding         : 0;
+    list-style      : none;
+    display         : flex;
+    flex-flow       : column;
+    background-color: transparent;
+
 }
 
-@media(min-width: 500px){
-    .NavigationItems{
+@media(min-width: 481px) {
+    .NavigationItems {
         flex-flow: row;
+    }
+}
+
+@media(max-width: 480px) {
+    .NavigationItems {
+        padding-top : 5vh;
+        padding-left: 8vw;
     }
 }

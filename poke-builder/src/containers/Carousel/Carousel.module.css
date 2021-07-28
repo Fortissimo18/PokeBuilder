@@ -1,0 +1,439 @@
+@media(min-width:481px) {
+  :root {
+
+    --carousel-height         : 29vw;
+    --carousel-top            : 0;
+    --carouselBar-padding-top : 9vw;
+    --carouselBar-padding-left: 2vw;
+
+    --card-top: 0;
+
+    --bar-height: 0.3vw;
+
+    --circle-size         : 1.7vw;
+    --circle-size-selected: 2vw;
+    --circle-border-size  : 0.15vw;
+
+    --index-font         : 1vw;
+    --index-font-selected: 1.1vw;
+
+    --label-font         : 1vw;
+    --label-font-selected: 1.2vw;
+    --label-size         : 4vw;
+    --label-top          : -4vw;
+    --label-top-selected : -5vw;
+    --label-left         : 2.3vw;
+
+    --arrow-size : 2vw;
+    --arrow-top  : 15vw;
+    --arrow-left : 3.8vw;
+    --arrow-right: 4.4vw;
+
+    --neon-font-size: 1.2vw;
+
+    --neonButton-top: 0;
+
+  }
+
+  .ArrowImg:hover {
+    transform: scale(1.5);
+  }
+
+  .ArrowImg.disabled:hover {
+    transform: scale(1);
+  }
+
+  .NeonButton:hover {
+    color  : var(--neon-text-color);
+    outline: none;
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
+      0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color),
+      0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color),
+      0 0 10rem var(--neon-text-color);
+
+    box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff,
+      0 0 2rem var(--neon-border-color), inset 0 0 2rem var(--neon-border-color),
+      0 0 4rem var(--neon-border-color), inset 0 0 4rem var(--neon-border-color);
+  }
+
+  .NeonButton:disabled:hover {
+    background-color: inherit;
+    color           : lightgray;
+    animation       : none;
+    border          : 3px solid lightgray;
+    box-shadow      : none;
+    text-shadow     : none;
+  }
+
+  .Carousel:hover {
+    animation: none;
+  }
+
+  .ProgressInnerStep:hover {
+    color  : white;
+    opacity: 1;
+  }
+
+  .ProgressInnerStep:hover:before {
+    color     : white;
+    background: #546747;
+    opacity   : 1;
+  }
+}
+
+
+@media(max-width:480px) {
+  :root {
+    --carousel-height         : 40vh;
+    --carousel-top            : -4vh;
+    --carouselBar-padding-top : 21vh;
+    --carouselBar-padding-left: 7vw;
+
+    --card-top: -6vh;
+
+    --bar-height: 0.5vh;
+
+    --circle-size         : 3.3vh;
+    --circle-size-selected: 3.8vh;
+    --circle-border-size  : 0.4vh;
+
+    --index-font         : 2vh;
+    --index-font-selected: 2.2vh;
+
+    --label-font         : 2vh;
+    --label-font-selected: 2.2vh;
+    --label-size         : 7vh;
+    --label-top          : -8vh;
+    --label-top-selected : -9vh;
+    --label-left         : 5vw;
+
+    --arrow-size : 5vh;
+    --arrow-top  : 20vh;
+    --arrow-left : 5vw;
+    --arrow-right: 6vw;
+
+    --neon-font-size: 2.2vh;
+
+    --neonButton-top: -4vh;
+  }
+
+  .Carousel {
+    width              : 100%;
+    height             : var(--carousel-height);
+    top                : var(--carousel-top);
+    margin             : 0px 0;
+    text-align         : center;
+    position           : relative;
+    background-image   : url(../../assets/images/pokeIngredients/BlackboardWithNail.png);
+    background-position: center;
+    background-size    : contain;
+    background-repeat  : no-repeat;
+    opacity            : 0.9;
+    border-radius      : 1em;
+    overflow           : hidden;
+    transform-origin   : center -30px;
+    animation          : swing ease-in-out 1.3s infinite alternate
+  }
+
+  .NeonButton {
+    color  : var(--neon-text-color);
+    outline: none;
+    text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
+      0 0 2rem var(--neon-text-color), 0 0 4rem var(--neon-text-color),
+      0 0 6rem var(--neon-text-color), 0 0 8rem var(--neon-text-color),
+      0 0 10rem var(--neon-text-color);
+
+
+    box-shadow: 0 0 0.1rem #fff, inset 0 0 0.1rem #fff,
+      0 0 0.6rem var(--neon-border-color), inset 0 0 0.6rem var(--neon-border-color);
+  }
+
+  .Carousel {
+    animation: none;
+  }
+}
+
+
+.Carousel {
+  width              : 100%;
+  height             : var(--carousel-height);
+  top                : var(--carousel-top);
+  margin             : 0px 0;
+  text-align         : center;
+  position           : relative;
+  background-image   : url(../../assets/images/pokeIngredients/BlackboardWithNail.png);
+  background-position: center;
+  background-size    : contain;
+  background-repeat  : no-repeat;
+  opacity            : 0.9;
+  border-radius      : 1em;
+  overflow           : hidden;
+  transform-origin   : center -30px;
+  animation          : swing ease-in-out 1.3s infinite alternate
+}
+
+
+.ProgressInner {
+  height      : 60px;
+  width       : auto;
+  padding-top : var(--carouselBar-padding-top);
+  padding-left: var(--carouselBar-padding-left);
+}
+
+.ProgressInner,
+.ProgressInnerStep:before {
+  position : relative;
+  top      : 6vw;
+  transform: translateY(-50%);
+  display  : block;
+  margin   : auto;
+}
+
+.ProgressInnerBarSet {
+  height       : var(--bar-height);
+  left         : 15%;
+  top          : calc(0vw - var(--bar-height));
+  border-radius: 6px;
+  width        : 60%;
+  position     : relative;
+  z-index      : -2;
+  background   : whitesmoke;
+  opacity      : 0.6;
+}
+
+.ProgressInnerBar {
+  height       : var(--bar-height);
+  left         : 15%;
+  background   : repeating-linear-gradient(45deg, #222c24, #222c24 4px, whitesmoke 4px, whitesmoke 10px);
+  transition   : width 800ms cubic-bezier(0.915, 0.015, 0.3, 1.005);
+  border-radius: 6px;
+  width        : 0;
+  position     : relative;
+  z-index      : -1;
+  opacity      : 0.6;
+
+}
+
+.ProgressInner #Step3:checked+div+div+div+div {
+  width: 60%;
+}
+
+.ProgressInner #Step2:checked+input+div+div+div+div {
+  width: 30%;
+}
+
+.ProgressInner #Step1:checked+input+input+div+div+div+div {
+  width: 0%;
+}
+
+.ProgressInnerStep:before {
+  width         : var(--circle-size);
+  height        : var(--circle-size);
+  color         : whitesmoke;
+  background    : #222c24;
+  border        : var(--circle-border-size) solid transparent;
+  font-size     : var(--index-font);
+  top           : 0.2vw;
+  border-radius : 100%;
+  transition    : all 0.4s;
+  cursor        : pointer;
+  pointer-events: none;
+}
+
+.ProgressInnerStep {
+  width     : 30%;
+  height    : 1.6vw;
+  transition: all 0.4s;
+  float     : left;
+  text-align: center;
+  position  : relative;
+}
+
+.ProgressInnerStep label {
+  opacity    : 0.8;
+  top        : var(--label-top);
+  height     : var(--label-size);
+  width      : var(--label-size);
+  left       : var(--label-left);
+  display    : block;
+  position   : relative;
+  font-size  : var(--label-font);
+  font-weight: 600;
+  cursor     : pointer;
+  z-index    : 2;
+}
+
+.ProgressInner #Step3:checked+div+div+div:before {
+  border-color    : whitesmoke;
+  background-color: #222c24;
+  color           : white;
+  width           : var(--circle-size-selected);
+  height          : var(--circle-size-selected);
+  font-size       : var(--index-font-selected);
+  font-weight     : 600;
+}
+
+.ProgressInner #Step2:checked+input+div+div:before {
+  border-color    : whitesmoke;
+  background-color: #222c24;
+  color           : white;
+  width           : var(--circle-size-selected);
+  height          : var(--circle-size-selected);
+  font-size       : var(--index-font-selected);
+  font-weight     : 600;
+}
+
+.ProgressInner #Step1:checked+input+input+div:before {
+  border-color    : whitesmoke;
+  background-color: #222c24;
+  color           : white;
+  width           : var(--circle-size-selected);
+  height          : var(--circle-size-selected);
+  font-size       : var(--index-font-selected);
+  font-weight     : 600;
+}
+
+.ProgressInner #Step3:checked+div+div+div>label {
+  font-size  : var(--label-font-selected);
+  font-weight: 600;
+  top        : var(--label-top-selected);
+  opacity    : 1;
+  color      : whitesmoke;
+}
+
+.ProgressInner #Step2:checked+input+div+div>label {
+  font-size  : var(--label-font-selected);
+  font-weight: 600;
+  top        : var(--label-top-selected);
+  opacity    : 1;
+  color      : whitesmoke;
+
+}
+
+.ProgressInner #Step1:checked+input+input+div>label {
+  font-size  : var(--label-font-selected);
+  font-weight: 600;
+  top        : var(--label-top-selected);
+  opacity    : 1;
+  color      : whitesmoke;
+
+}
+
+.ProgressInnerStep:nth-of-type(1):before {
+  content: "1";
+}
+
+.ProgressInnerStep:nth-of-type(2):before {
+  content: "2";
+}
+
+.ProgressInnerStep:nth-of-type(3):before {
+  content: "3";
+}
+
+.ProgressInner input[type=radio] {
+  display: none;
+}
+
+
+.Card {
+  width      : 100%;
+  height     : auto;
+  margin     : 0px 0;
+  text-align : center;
+  position   : relative;
+  top        : var(--card-top);
+  line-height: 0.8;
+  padding-top: 0px;
+  z-index    : -2;
+}
+
+.Card fieldset {
+  margin     : 0;
+  padding-top: 0;
+  width      : 90%;
+  line-height: 0.8;
+}
+
+.Card fieldset:not(:first-of-type) {
+  display: none;
+}
+
+.Card input,
+.Card textarea {
+  width: auto;
+}
+
+@keyframes swing {
+
+  0% {
+    -webkit-transform: rotateZ(1deg);
+    -moz-transform   : rotateZ(1deg);
+    transform        : rotateZ(1deg);
+
+  }
+
+  100% {
+    -webkit-transform: rotateZ(-1deg);
+    -moz-transform   : rotateZ(-1deg);
+    transform        : rotateZ(-1deg);
+  }
+
+}
+
+
+.ArrowImg {
+  background-position: center;
+  background-size    : contain;
+  background-repeat  : no-repeat;
+  position           : absolute;
+  top                : var(--arrow-top);
+  width              : var(--arrow-size);
+  height             : var(--arrow-size);
+}
+
+.Left {
+  background-image: url(../../assets/images/pokeIngredients/ArrowLeft.png);
+  left            : var(--arrow-left);
+}
+
+.Right {
+  background-image: url(../../assets/images/pokeIngredients/ArrowRight.png);
+  right           : var(--arrow-right);
+}
+
+.Disabled {
+  background-image: none;
+  cursor          : default;
+  opacity         : 0.6;
+}
+
+
+.NeonButton {
+  position           : relative;
+  margin-top         : 2%;
+  top                : var(--neonButton-top);
+  --neon-text-color  : #fab73d;
+  --neon-border-color: #fddca5;
+  background-color   : transparent;
+  font-family        : "neontubes";
+
+  font-size     : var(--neon-font-size);
+  font-weight   : 500;
+  padding       : 2px 6px 5.5px;
+  border        : 3px solid #fdecd0;
+  border-radius : 3px;
+  text-transform: uppercase;
+
+  color      : #fdecd0;
+  text-shadow: 0 0 0 transparent, 0 0 10px #fab73d, 0 0 20px rgba(232, 190, 85, 0.5), 0 0 40px #fab73d, 0 0 100px #fab73d, 0 0 200px #fab73d, 0 0 300px #fab73d, 0 0 500px #fab73d, 0 0 1000px #fab73d;
+  box-shadow : 0 0 -1px #fdecd0 0 0 0 #fddca5, 0 0 5px #fddca5, 0 0 20px rgba(232, 190, 85, 0.5), 0 0 40px #fddca5, 0 0 100px #fddca5;
+
+}
+
+.NeonButton:disabled {
+  color      : lightgray;
+  border     : 3px solid lightgray;
+  box-shadow : none;
+  text-shadow: none;
+}

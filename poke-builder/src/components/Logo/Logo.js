@@ -1,5 +1,5 @@
 import React from 'react';
-import pokelogo from '../../assets/images/burger-logo.png';
+import pokelogo from '../../assets/images/pokeIngredients/LantingPokeLogo.png';
 import classes from './Logo.module.css';
 
 const logo=()=>(

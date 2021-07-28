@@ -1,0 +1,21 @@
+@media(min-width:481px) {
+  :root {
+    --alert-font-size: 0.8vw;
+  }
+}
+
+@media(max-width:480px) {
+  :root {
+    --alert-font-size: 1.9vh;
+  }
+}
+
+.Alert {
+  font-size     : var(--alert-font-size);
+  font-weight   : 600;
+  letter-spacing: 2px;
+  color         : #f74e4b;
+  text-align    : center;
+  margin-top    : 0.3vw;
+  padding       : 0;
+}

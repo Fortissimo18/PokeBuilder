@@ -1,52 +1,190 @@
-.BuildControls{
-    width:100%;
-    background-color: #cf8f2e;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    box-shadow: 0 2px 1px;
-    margin: auto;
-    padding: 10px 0;
+@media(min-width: 481px) {
+
+  :root {
+    --controls-padding-left: 0;
+
+    --totalPrice-font-size   : 1.2vw;
+    --totalPrice-padding-top : 30px;
+    --totalPrice-padding-left: 10%;
+
+    --ingrendientName-font-size: 1.2vw;
+    --ingredientName-margin    : 0.6vw;
+    --ingredientItems-width    : 10vw;
+
+    --ingredientName-padding-left: 3vw;
+
+    --ingredientPrice-font-size: 1.1vw;
+
+    --checkLine-width: 1.7vw;
+    --checkLine-size : 1px;
+
+    --checkSign-font-size: 1.2vw;
+    --checkSign-top      : 0.1vh;
+    --checkSign-left     : 0.5vw;
+  }
+}
+
+@media(max-width: 480px) {
+
+  :root {
+    --controls-padding-left: 5vw;
+
+    --totalPrice-font-size   : 2.2vh;
+    --totalPrice-padding-top : 2.4vh;
+    --totalPrice-padding-left: 10%;
+
+    --ingredientItems-width: 20vh;
+
+    --ingrendientName-font-size: 2.8vh;
+    --ingredientName-margin    : 0.9vh;
+
+    --ingredientName-padding-left: 9vw;
+    --ingredientPrice-font-size  : 2.2vh;
+
+
+    --checkLine-width: 6vw;
+    --checkLine-size : 2px;
+
+    --checkSign-font-size: 2.2vh;
+    --checkSign-top      : 0.1vh;
+    --checkSign-left     : 1.5vw;
+
+  }
+}
+
+.Controls {
+  padding-top : 2vw;
+  padding-left: var(--controls-padding-left);
+  clip-path   : polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
+.GoUp {
+  animation: swapLeft 1s ease-in-out;
+}
+
+.GoDown {
+  animation: swapRight 1s ease-in-out;
+}
+
+@keyframes swapLeft {
+  0% {
+    transform: TranslateX(0);
+    opacity  : 1;
+  }
+
+  45% {
+    transform: TranslateX(-100%);
+    opacity  : 0;
+    clip-path: polygon(100% 100%, 100% 100%, 100% 0%, 100% 0%);
+  }
+
+  55% {
+    transform: TranslateX(100%);
+    opacity  : 0;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+
+  100% {
+    transform: TranslateX(0);
+    opacity  : 1;
+  }
+}
+
+@keyframes swapRight {
+  0% {
+    transform: TranslateX(0);
+    opacity  : 1;
+  }
+
+  45% {
+    transform: TranslateX(100%);
+    opacity  : 0;
+  }
+
+  55% {
+    transform: TranslateX(-100%);
+    opacity  : 0;
+    clip-path: polygon(100% 100%, 100% 100%, 100% 0%, 100% 0%);
+  }
+
+  100% {
+    transform: TranslateX(0);
+    opacity  : 1;
+  }
 }
 
 
-.OrderButton {
-    background-color: #DAD735;
-    outline: none;
-    cursor: pointer;
-    border: 1px solid #966909;
-    color: #966909;
-    font-family: inherit;
-    font-size: 1.2em;
-    padding: 15px 30px;
-    box-shadow: 2px 2px 2px #966909;
+.TotalPrice {
+  color         : whitesmoke;
+  font-weight   : 600;
+  font-size     : var(--totalPrice-font-size);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  text-shadow   : gray 2px;
+  padding-top   : var(--totalPrice-padding-top);
+  padding-left  : var(--totalPrice-padding-left);
 }
 
-.OrderButton:hover, .OrderButton:active {
-    background-color: #A0DB41;
-    border: 1px solid #966909;
-    color: #966909;
+
+.RadioGroup {
+  margin : auto;
+  display: flex;
 }
 
-.OrderButton:disabled {
-    background-color: #C7C6C6;
-    cursor: not-allowed;
-    border: 1px solid #ccc;
-    color: #888888;
+.RadioLabel {
+  font-size  : var(--ingrendientName-font-size);
+  font-weight: 400;
+  position   : relative;
+  display    : inline-block;
+  margin     : var(--ingredientName-margin) auto;
+  /* margin  : 0.6vw auto; */
+  color      : #d6d6d6;
+  width      : var(--ingredientItems-width);
+  text-align : justify;
 }
 
-.OrderButton:not(:disabled) {
-    animation: enable 0.3s linear;
+.RadioLabel input {
+  opacity : 0;
+  position: absolute;
 }
 
-@keyframes enable {
-    0% {
-        transform: scale(1);
-    }
-    60% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+.RadioLabel .InnerLabel {
+  position    : relative;
+  display     : inline-block;
+  padding-left: var(--ingredientName-padding-left);
+}
+
+.RadioLabel .InnerLabel:before {
+  content      : "";
+  position     : absolute;
+  left         : 0;
+  bottom       : 0;
+  border-bottom: var(--checkLine-size) dashed #655d5b;
+  width        : var(--checkLine-width);
+  transition   : border-bottom 0.5s ease;
+}
+
+.RadioLabel input:focus~.InnerLabel:before {
+  border-bottom: var(--checkLine-size) solid #655d5b;
+}
+
+.RadioLabel input:checked~.InnerLabel:after {
+  content    : "✓";
+  color      : whitesmoke;
+  position   : absolute;
+  font-size  : var(--checkSign-font-size);
+  font-weight: 800;
+  top        : var(--checkSign-top);
+  left       : var(--checkSign-left);
+
+
+}
+
+.IngredientPrice {
+  white-space: pre;
+  float      : right;
+  width      : 10%;
+  margin     : auto;
+  opacity    : 0.8;
+  font-size  : var(--ingredientPrice-font-size);
 }

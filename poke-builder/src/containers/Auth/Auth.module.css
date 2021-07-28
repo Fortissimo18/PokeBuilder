@@ -1,0 +1,292 @@
+@media(min-width: 481px) {
+  :root {
+    --card3dwrap-left  : 23vh;
+    --card3dwrap-width : 60vh;
+    --card3dwrap-height: 84vh;
+
+    --card3dwrapper-top: 0;
+
+    --textArea-height           : 55vh;
+    --textArea-width            : 45vh;
+    --textArea-padding-leftright: 4vh;
+    --textArea-margin-topbottom : 50vh;
+    --textArea-margin-leftright : 6.5vh;
+
+    --toggle-left: 45vh;
+    --toggle-top : 7vh;
+
+    --toggleLabel-left: 34vh;
+    --toggleLabel-top : 12vh;
+
+    --authButton-top: 2vh;
+  }
+}
+
+@media(max-width: 480px) {
+  :root {
+    --card3dwrap-left  : 8vw;
+    --card3dwrap-width : 85vw;
+    --card3dwrap-height: 80vh;
+
+    --card3dwrapper-top: 2vh;
+
+    --textArea-height           : 50vh;
+    --textArea-width            : 75vw;
+    --textArea-padding-leftright: 4vh;
+    --textArea-margin-topbottom : 50vh;
+    --textArea-margin-leftright : 4vw;
+
+    --toggle-left: 35vw;
+    --toggle-top : 11vh;
+
+    --toggleLabel-left: 18vw;
+    --toggleLabel-top : 16vh;
+
+    --authButton-top: 0.8vh;
+
+  }
+}
+
+
+.LoginBG {
+  background-image   : url(../../assets/images/pokeIngredients/LoginBG.jpg);
+  background-position: center;
+  background-size    : cover;
+  background-repeat  : no-repeat;
+  position           : fixed;
+  top                : 0;
+  left               : 0;
+  width              : 100vw;
+  height             : 100vh;
+}
+
+
+.Card3dWrap {
+  position               : relative;
+  width                  : var(--card3dwrap-width);
+  height                 : var(--card3dwrap-height);
+  -webkit-transform-style: flat;
+  transform-style        : flat;
+  perspective            : 2000px;
+  margin                 : 0;
+  left                   : var(--card3dwrap-left);
+}
+
+.Card3dWrapper {
+  width                  : 100%;
+  height                 : 100%;
+  position               : absolute;
+  top                    : var(--card3dwrapper-top);
+  left                   : 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style        : preserve-3d;
+  transition             : all 600ms ease-out;
+}
+
+.CenterWrap {
+  position: absolute;
+  width   : var(--textArea-width);
+  height  : var(--textArea-height);
+  padding : 0 var(--textArea-padding-leftright);
+
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index  : 20;
+  display  : block;
+  margin   : var(--textArea-margin-topbottom) var(--textArea-margin-leftright);
+  overflow : auto;
+}
+
+.CardFront,
+.CardBack {
+  width                      : 100%;
+  height                     : 100%;
+  background-image           : url('../../assets/images/pokeIngredients/ChopBoard.png');
+  background-position        : center;
+  background-repeat          : no-repeat;
+  background-size            : contain;
+  position                   : absolute;
+  left                       : 0;
+  top                        : 0;
+  -webkit-transform-style    : preserve-3d;
+  transform-style            : preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility   : hidden;
+  -o-backface-visibility     : hidden;
+  backface-visibility        : hidden;
+  overflow                   : auto;
+}
+
+.CardBack {
+  transform  : rotateY(180deg);
+  padding-top: 3vh;
+}
+
+
+.CenterWrap h2 {
+  margin-bottom : 3vh;
+  color         : #3a2214;
+  font-weight   : 900;
+  font-size     : 4vh;
+  letter-spacing: 3px;
+  text-shadow   : 0px 1px 0px rgba(255, 255, 255, .3), 0px -1px 0px rgba(0, 0, 0, .7);
+}
+
+.Heading {
+  display       : block;
+  top           : var(--toggleLabel-top);
+  left          : var(--toggleLabel-left);
+  white-space   : pre;
+  position      : absolute;
+  margin        : 0;
+  text-transform: uppercase;
+  font-weight   : 700;
+  text-align    : justify;
+  z-index       : 3;
+  font-size     : 2.5vh;
+  width         : auto;
+}
+
+.Heading span {
+  padding-right: 22vh;
+}
+
+.Section {
+  position       : relative;
+  width          : 100%;
+  display        : block;
+  opacity        : 1;
+  padding-left   : auto;
+  display        : block;
+  justify-content: center;
+  text-align     : center;
+  padding-top    : 0;
+}
+
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  opacity : 0;
+}
+
+.Checkbox:checked~.Card3dWrap .Card3dWrapper {
+  transform: rotateY(180deg);
+}
+
+.Checkbox:checked+label,
+.Checkbox:not(:checked)+label {
+  top       : var(--toggle-top);
+  left      : var(--toggle-left);
+  position  : absolute;
+  display   : block;
+  text-align: center;
+  width     : auto;
+  margin    : 0px auto;
+  cursor    : pointer;
+  z-index   : 4;
+}
+
+.Checkbox:checked+label:before,
+.Checkbox:not(:checked)+label:before {
+  position           : absolute;
+  display            : block;
+  width              : 15vh;
+  height             : 10vh;
+  background-image   : url(../../assets/images/pokeIngredients/Arrow.png);
+  background-size    : contain;
+  background-position: center;
+  background-repeat  : no-repeat;
+  content            : '';
+  z-index            : 4;
+  transition         : all 0.5s ease;
+  animation          : scale-up-down 0.8s ease-in-out infinite alternate;
+}
+
+.Checkbox:checked+label:before {
+  transform: scaleX(-1);
+}
+
+@keyframes scale-up-down {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1)
+  }
+}
+
+
+.AuthButton {
+  top                : var(--authButton-top);
+  width              : 17vh;
+  min-width          : 50px;
+  height             : 6vh;
+  padding-left       : 2vh;
+  position           : relative;
+  border-radius      : 5px;
+  background-image   : url('../../assets/images/pokeIngredients/Parchment.png');
+  background-position: right;
+  background-size    : cover;
+  background-repeat  : no-repeat;
+  padding            : auto;
+  transition         : background 300ms ease-in-out;
+  border-color       : transparent;
+  color              : #3a2214;
+  font-size          : 2.3vh;
+  font-weight        : 600;
+  letter-spacing     : 1px;
+}
+
+.AuthButton:disabled {
+  color      : gray;
+  font-weight: 500;
+}
+
+.Shadow {
+  border  : transparent;
+  position: relative;
+}
+
+.Shadow:before {
+  z-index   : -1;
+  position  : absolute;
+  content   : "";
+  bottom    : 15px;
+  right     : 7px;
+  width     : 75%;
+  top       : 0px;
+  box-shadow: 0 18px 10px black;
+  opacity   : 0.8;
+  transform : rotate(4deg);
+  transition: all 150ms ease-in-out;
+}
+
+.AuthButton:hover {
+  background-image   : url('../../assets/images/pokeIngredients/Parchment.png');
+  background-position: center;
+  background-size    : cover;
+  background-repeat  : no-repeat;
+}
+
+.Shadow:hover::before {
+  transform: rotate(0deg);
+  bottom   : 20px;
+  z-index  : -1;
+}
+
+.Circle {
+  position           : absolute;
+  top                : 2vh;
+  left               : 1.2vh;
+  border-radius      : 50%;
+  background-image   : url('../../assets/images/pokeIngredients/ChopBoard.png');
+  background-position: center;
+  background-size    : cover;
+  background-repeat  : no-repeat;
+  box-shadow         : inset 1px 1px 1px 0px rgba(0, 0, 0, 0.5), inset 0 0 0 25px transparent;
+  width              : 1.8vh;
+  height             : 1.8vh;
+  display            : inline-block;
+  margin-top         : auto;
+}

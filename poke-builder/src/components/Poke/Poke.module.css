@@ -1,30 +1,44 @@
-.Poke{
-    width: 100%;
-    margin: auto;
-    height: 250px;
-    overflow: scroll;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2rem;
+@media(min-width:481px) {
+  :root {
+    --ingredientsContainer-top  : 38%;
+    --ingredientsContainer-left : 42%;
+    --ingredientsContainer-width: 10vw;
+
+    --poke-height: 35vw;
+    --poke-top   : 0;
+  }
 }
 
-@media (min-width: 1000px) and (min-height:700px){
-    .Poke{
-        width: 700px;
-        height: 600px;
-    }
+@media(max-width:480px) {
+
+  :root {
+    --ingredientsContainer-top  : 39%;
+    --ingredientsContainer-left : 39%;
+    --ingredientsContainer-width: 9vh;
+
+    --poke-height: 40vh;
+    --poke-top   : -1vh;
+  }
 }
 
-@media (min-width: 500px) and (min-height:401px){
-    .Poke{
-        width: 450px;
-        height: 400px;
-    }
+
+.Poke {
+  background-image   : url(../../assets/images/pokeIngredients/EmptyBowl.jpg);
+  background-position: center;
+  background-size    : contain;
+  background-repeat  : no-repeat;
+  position           : relative;
+  list-style         : none;
+  display            : block;
+  align-content      : center;
+  margin             : auto;
+  height             : var(--poke-height);
+  top                : var(--poke-top)
 }
 
-@media (min-width: 500px) and (min-height:400px){
-    .Poke{
-        width: 350px;
-        height: 300px;
-    }
+.IngredientsContainer {
+  position: absolute;
+  top     : var(--ingredientsContainer-top);
+  left    : var(--ingredientsContainer-left);
+  width   : var(--ingredientsContainer-width);
 }

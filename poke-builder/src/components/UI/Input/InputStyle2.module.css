@@ -1,0 +1,71 @@
+@media(min-width:481px) {
+    :root {
+        --inputElement-width            : 15vw;
+        --inputElement-padding-topbottom: 0.8vw;
+        --inputElement-top              : 0.5vw;
+        --inputPlaceholder-font-size    : 1vw;
+    }
+}
+
+@media(max-width:480px) {
+    :root {
+        --inputElement-width            : 60vw;
+        --inputElement-padding-topbottom: 1vh;
+        --inputElement-top              : 0.5vh;
+        --inputPlaceholder-font-size    : 2vh;
+
+    }
+}
+
+.Input {
+    width        : 100%;
+    margin       : auto;
+    border-radius: 2px;
+    text-align   : center;
+}
+
+.InputElement {
+    background    : inherit;
+    width         : var(--inputElement-width);
+    color         : #2b331f;
+    font-weight   : 700;
+    letter-spacing: 2px;
+    border        : none;
+    border-bottom : 1px solid #bbc8ba;
+    padding       : var(--inputElement-padding-topbottom) 0;
+    top           : var(--inputElement-top);
+    text-align    : center;
+    margin        : auto;
+}
+
+.InputElement::placeholder {
+    color         : #546747;
+    letter-spacing: 2px;
+    font-size     : var(--inputPlaceholder-font-size);
+    /* font-size  : 1vw; */
+    font-weight   : 600;
+    text-align    : center;
+    margin        : auto;
+}
+
+.InputElement:focus {
+    color        : #546747;
+    outline      : none;
+    border-bottom: 2px solid #546747;
+    font-size    : var(--inputPlaceholder-font-size);
+    transition   : 0.8s all ease;
+    overflow     : auto;
+}
+
+.InputElement:focus::placeholder {
+    opacity: 0;
+}
+
+.Invalid {
+    border-bottom: 2px solid #f8d7da;
+    margin       : auto;
+}
+
+.Invalid:focus {
+    border-bottom: 2px solid #f8d7da;
+}
