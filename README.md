@@ -16,7 +16,9 @@ The ordering steps imitates the common ordering process of poke bowls on online 
 After choosing the ingredients, users need to provide the delivery information by filling out the form.
 
 <img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/ContactInfo.gif" width="720" height="405" />
+
 ### Sign Up/ In
+
 The sign up/in form can be switched with a toggle arrow without changing the URL. Input validity messages are shown in real-time when users type in.
 
 <img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/SignUp.gif" width="720" height="405" />
