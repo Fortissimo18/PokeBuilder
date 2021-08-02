@@ -28,6 +28,10 @@ Viewing your previous orders on the "My Account" page when signed in. Currently,
 
 <p align="center"><img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/MyAccount.gif" width="720" height="405" /></p>
 
+### Mobile Version UI
+<p align="center"><img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/ContactInfo.PNG"/></p>
+
+
 
 ## Framework and Techs
 This single-page web app uses React as the framework. Below are the detailed techs used: 
