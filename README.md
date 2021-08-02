@@ -29,7 +29,7 @@ Viewing your previous orders on the "My Account" page when signed in. Currently,
 <p align="center"><img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/MyAccount.gif" width="720" height="405" /></p>
 
 ### Mobile Version UI
-<p align="center"><img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/ContactInfo.PNG" width="414" height="736"/></p>
+<p align="center"><img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/ContactInfo.PNG" width="207" height="368"/></p>
 
 
 
