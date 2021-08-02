@@ -6,19 +6,19 @@ The structure of this poke ordering website came from the popular Udemy React co
 
 ## Ideas Behind
 Dining out isn't always about food. The music, ambience, lightning and conversations are all memories you share with your beloved ones. When dining out becomes a luxury during the lockdown, why can't we, at least try to, simulate the onsite dining experience for ordering online? 
+
 ## Features
 ### Ordering
 The ordering steps imitates the common ordering process of poke bowls on online delivery  Apps. Users need to sign in before choosing at least one ingredient from the base, proteins, and toppings.
-
-
+<img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/Order.gif" width="720" height="405" />
 After choosing the ingredients, users need to provide the delivery information by filling out the form.
-
-
+<img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/ContactInfo.gif" width="720" height="405" />
 ### Sign Up/ In
 The sign up/in form can be switched with a toggle arrow without changing the URL. Input validity messages are shown in real-time when users type in.
-
+<img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/SignUp.gif" width="720" height="405" />
 ### View your Orders
 Viewing your previous orders on the "My Account" page when signed in. Currently, the detailed order information including time, and delivery address, and the order management function is under development.
+<img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/MyAccount.gif" width="720" height="405" />
 
 
 ## Framework and Techs
