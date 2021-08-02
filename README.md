@@ -1,7 +1,4 @@
 # Poke Online Ordering Website
-
-https://lantings-poke.web.app/
-
 Spending most of my time on back-end development previously, I'm glad to deliver my first front-end focused project with React!
 
 The structure of this poke ordering website came from the popular Udemy React course project "Burger Builder" by Maximillian. I found it quite suitable for the poke bowls I often order online, and that's how this variation comes.
@@ -10,6 +7,7 @@ The structure of this poke ordering website came from the popular Udemy React co
 Dining out isn't always about food. The music, ambience, lightning and conversations are all memories you share with your beloved ones. When dining out becomes a luxury during the lockdown, why can't we, at least try to, simulate the onsite dining experience for ordering online? 
 
 ## Features
+Site URL: https://lantings-poke.web.app/
 ### Ordering
 The ordering steps imitates the common ordering process of poke bowls on online delivery  Apps. Users need to sign in before choosing at least one ingredient from the base, proteins, and toppings.
 
