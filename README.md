@@ -11,22 +11,22 @@ Dining out isn't always about food. The music, ambience, lightning and conversat
 ### Ordering
 The ordering steps imitates the common ordering process of poke bowls on online delivery  Apps. Users need to sign in before choosing at least one ingredient from the base, proteins, and toppings.
 
-<img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/Order.gif" width="720" height="405" />
+<div style="text-align:center"><img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/Order.gif" width="720" height="405" /></div>
 
 After choosing the ingredients, users need to provide the delivery information by filling out the form.
 
-<img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/ContactInfo.gif" width="720" height="405" />
+<div style="text-align:center"><img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/ContactInfo.gif" width="720" height="405" /></div>
 
 ### Sign Up/ In
 
 The sign up/in form can be switched with a toggle arrow without changing the URL. Input validity messages are shown in real-time when users type in.
 
-<img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/SignUp.gif" width="720" height="405" />
+<div style="text-align:center"><img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/SignUp.gif" width="720" height="405" /></div>
 
 ### View your Orders
 Viewing your previous orders on the "My Account" page when signed in. Currently, the detailed order information including time, and delivery address, and the order management function is under development.
 
-<img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/MyAccount.gif" width="720" height="405" />
+<div style="text-align:center"><img src="https://github.com/Fortissimo18/PokeBuilder/blob/main/demo/MyAccount.gif" width="720" height="405" /></div>
 
 
 ## Framework and Techs
